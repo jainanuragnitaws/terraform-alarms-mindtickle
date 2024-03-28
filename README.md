@@ -11,4 +11,29 @@ Pre-Requisite to execute the code -
 5. aws credentials configured # use command "aws config" and then provide access key and secret key from step 3 above.
 
 
-SQS the name for this SQS could be provided by the user in the terraform.tfvars file
+Commands execution order -
+
+1. git clone
+2. terraform fmt # to rightly format the code in case required
+3. terraform init #to initialise and To make the initial dependency selections that will initialize the dependency lock file
+4. terraform plan # to check the plan o/p and see if the required resources are being created.
+5. terraform apply --auto-approve # to create the final resources
+   a. this will ask for two i/p - region and the endpoint email
+6. terraform destroy --auto-approv # to destroy the resources
+
+
+Files Configuration - 
+1. Main.tf
+   a. this is the main file which contains provider config (we can create separate file provider.tf as well for this)
+   b. this also conatins resource block to create SQS, SNS and SNS endpoint
+
+2. alarms.tf
+   a. this conatins are resource blocks to create to alarms on the basis of two different metrices
+
+3. variables.tf
+   a. this file conatins all the varibales required to create the above resources
+   b. for some variables the i/p is required from user, for some default values have been configured
+
+4. terraform.tfvars
+   a. conatins the value for the varibales defined and in case to overwrite the default thresolds in case required.
+
