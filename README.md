@@ -37,3 +37,8 @@ Files Configuration -
 4. terraform.tfvars
    a. conatins the value for the varibales defined and in case to overwrite the default thresolds in case required.
 
+References 
+
+1. https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue
+2. https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic
+3. https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm
