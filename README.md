@@ -21,6 +21,10 @@ Commands execution order -
    a. this will ask for two i/p - region and the endpoint email
 6. terraform destroy --auto-approv # to destroy the resources
 
+TEST Plan -
+
+1. Go to AWS SQS console and click on "send and Receive Message button" and send 9-10 sample message saying "Hi" and wait for sometime.
+2. This should trigger emails and alerts
 
 Files Configuration - 
 1. Main.tf
