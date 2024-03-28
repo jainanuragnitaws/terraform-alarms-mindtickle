@@ -39,5 +39,4 @@ variable "oldest_threshold" {
 }
 #below variable is to proivde endpoint for the email
 variable "endpoint_email" {
-  default = "jainanurag.nitsxr@gmail.com"
 }
